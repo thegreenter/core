@@ -6,7 +6,7 @@
  * Time: 13:26
  */
 
-namespace Greenter\Xml\Builder;
+namespace Greenter\Builder;
 
 use Greenter\Model\DocumentInterface;
 
