@@ -81,6 +81,10 @@ class Invoice extends BaseSale
      * @var Client
      */
     private $seller;
+    /**
+     * @var Client
+     */
+    private $buyer;
 
     /**
      * @return string
@@ -317,6 +321,26 @@ class Invoice extends BaseSale
     public function setSeller($seller)
     {
         $this->seller = $seller;
+        return $this;
+    }
+
+    /**
+     * @return Client
+     */
+    public function getBuyer()
+    {
+        return $this->buyer;
+    }
+
+    /**
+     * Datos del comprador.
+     *
+     * @param Client $buyer
+     * @return Invoice
+     */
+    public function setBuyer($buyer)
+    {
+        $this->buyer = $buyer;
         return $this;
     }
 }
