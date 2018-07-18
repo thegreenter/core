@@ -33,6 +33,10 @@ class Company
      */
     private $address;
 
+    /**
+     * @var string
+     */
+    private $localAnexoCode;
 
     /**
      * @var string
@@ -121,6 +125,27 @@ class Company
     {
         $this->address = $address;
 
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLocalAnexoCode()
+    {
+        return $this->localAnexoCode;
+    }
+
+    /**
+     * Código asignado por SUNAT para el establecimiento anexo declarado en el RUC. De informar un código distinto a 0000,
+     * se verificará que corresponda al código del establecimiento anexo que SUNAT tiene registrado en sus sistemas.
+     *
+     * @param string $localAnexoCode
+     * @return Company
+     */
+    public function setLocalAnexoCode($localAnexoCode)
+    {
+        $this->localAnexoCode = $localAnexoCode;
         return $this;
     }
 
