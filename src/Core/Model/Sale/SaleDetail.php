@@ -60,6 +60,16 @@ class SaleDetail
     /**
      * @var float
      */
+    private $mtoBaseIgv;
+
+    /**
+     * @var float
+     */
+    private $porcentajeIgv;
+
+    /**
+     * @var float
+     */
     private $igv;
 
     /**
@@ -70,6 +80,15 @@ class SaleDetail
     /**
      * @var float
      */
+    private $mtoBaseIsc;
+
+    /**
+     * @var float
+     */
+    private $porcentajeIsc;
+    /**
+     * @var float
+     */
     private $isc;
 
     /**
@@ -77,6 +96,18 @@ class SaleDetail
      */
     private $tipSisIsc;
 
+    /**
+     * @var float
+     */
+    private $mtoBaseOth;
+    /**
+     * @var float
+     */
+    private $porcentajeOth;
+    /**
+     * @var float
+     */
+    private $otroTributo;
     /**
      * @var float
      */
@@ -398,6 +429,132 @@ class SaleDetail
     {
         $this->mtoValorGratuito = $mtoValorGratuito;
 
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoBaseIgv()
+    {
+        return $this->mtoBaseIgv;
+    }
+
+    /**
+     * @param float $mtoBaseIgv
+     * @return SaleDetail
+     */
+    public function setMtoBaseIgv($mtoBaseIgv)
+    {
+        $this->mtoBaseIgv = $mtoBaseIgv;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPorcentajeIgv()
+    {
+        return $this->porcentajeIgv;
+    }
+
+    /**
+     * @param float $porcentajeIgv
+     * @return SaleDetail
+     */
+    public function setPorcentajeIgv($porcentajeIgv)
+    {
+        $this->porcentajeIgv = $porcentajeIgv;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoBaseIsc()
+    {
+        return $this->mtoBaseIsc;
+    }
+
+    /**
+     * @param float $mtoBaseIsc
+     * @return SaleDetail
+     */
+    public function setMtoBaseIsc($mtoBaseIsc)
+    {
+        $this->mtoBaseIsc = $mtoBaseIsc;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPorcentajeIsc()
+    {
+        return $this->porcentajeIsc;
+    }
+
+    /**
+     * @param float $porcentajeIsc
+     * @return SaleDetail
+     */
+    public function setPorcentajeIsc($porcentajeIsc)
+    {
+        $this->porcentajeIsc = $porcentajeIsc;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoBaseOth()
+    {
+        return $this->mtoBaseOth;
+    }
+
+    /**
+     * @param float $mtoBaseOth
+     * @return SaleDetail
+     */
+    public function setMtoBaseOth($mtoBaseOth)
+    {
+        $this->mtoBaseOth = $mtoBaseOth;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPorcentajeOth()
+    {
+        return $this->porcentajeOth;
+    }
+
+    /**
+     * @param float $porcentajeOth
+     * @return SaleDetail
+     */
+    public function setPorcentajeOth($porcentajeOth)
+    {
+        $this->porcentajeOth = $porcentajeOth;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getOtroTributo()
+    {
+        return $this->otroTributo;
+    }
+
+    /**
+     * @param float $otroTributo
+     * @return SaleDetail
+     */
+    public function setOtroTributo($otroTributo)
+    {
+        $this->otroTributo = $otroTributo;
         return $this;
     }
 }
