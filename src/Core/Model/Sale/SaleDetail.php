@@ -53,6 +53,14 @@ class SaleDetail
     private $mtoValorUnitario;
 
     /**
+     * @var Charge[]
+     */
+    private $cargos;
+    /**
+     * @var Charge[]
+     */
+    private $descuentos;
+    /**
      * @var float
      */
     private $descuento;
@@ -263,6 +271,7 @@ class SaleDetail
     }
 
     /**
+     * @deprecated UBL 2.1
      * @param float $descuento
      *
      * @return SaleDetail
@@ -555,6 +564,42 @@ class SaleDetail
     public function setOtroTributo($otroTributo)
     {
         $this->otroTributo = $otroTributo;
+        return $this;
+    }
+
+    /**
+     * @return Charge[]
+     */
+    public function getCargos()
+    {
+        return $this->cargos;
+    }
+
+    /**
+     * @param Charge[] $cargos
+     * @return SaleDetail
+     */
+    public function setCargos($cargos)
+    {
+        $this->cargos = $cargos;
+        return $this;
+    }
+
+    /**
+     * @return Charge[]
+     */
+    public function getDescuentos()
+    {
+        return $this->descuentos;
+    }
+
+    /**
+     * @param Charge[] $descuentos
+     * @return SaleDetail
+     */
+    public function setDescuentos($descuentos)
+    {
+        $this->descuentos = $descuentos;
         return $this;
     }
 }

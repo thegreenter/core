@@ -44,6 +44,21 @@ class Invoice extends BaseSale
     private $mtoDescuentos;
 
     /**
+     * @var Charge[]
+     */
+    private $descuentos;
+
+    /**
+     * @var Charge[]
+     */
+    private $cargos;
+
+    /**
+     * @var float
+     */
+    private $mtoCargos;
+
+    /**
      * @var float
      */
     private $totalAnticipos;
@@ -264,6 +279,60 @@ class Invoice extends BaseSale
     public function setBuyer($buyer)
     {
         $this->buyer = $buyer;
+        return $this;
+    }
+
+    /**
+     * @return Charge[]
+     */
+    public function getDescuentos()
+    {
+        return $this->descuentos;
+    }
+
+    /**
+     * @param Charge[] $descuentos
+     * @return Invoice
+     */
+    public function setDescuentos($descuentos)
+    {
+        $this->descuentos = $descuentos;
+        return $this;
+    }
+
+    /**
+     * @return Charge[]
+     */
+    public function getCargos()
+    {
+        return $this->cargos;
+    }
+
+    /**
+     * @param Charge[] $cargos
+     * @return Invoice
+     */
+    public function setCargos($cargos)
+    {
+        $this->cargos = $cargos;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoCargos()
+    {
+        return $this->mtoCargos;
+    }
+
+    /**
+     * @param float $mtoCargos
+     * @return Invoice
+     */
+    public function setMtoCargos($mtoCargos)
+    {
+        $this->mtoCargos = $mtoCargos;
         return $this;
     }
 }
