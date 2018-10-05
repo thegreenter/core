@@ -88,6 +88,16 @@ class BaseSale implements DocumentInterface
     protected $mtoOtrosTributos;
 
     /**
+     * @var float
+     */
+    protected $totalImpuestos;
+
+    /**
+     * @var float
+     */
+    protected $valorVenta;
+
+    /**
      * Importe total de la venta, cesión en uso o del servicio prestado.
      *
      * @var float
@@ -115,6 +125,23 @@ class BaseSale implements DocumentInterface
      * @var Document[]
      */
     protected $relDocs;
+
+    /**
+     * Orden de Compra relacionado.
+     *
+     * @var string
+     */
+    private $compra;
+
+    /**
+     * @var Prepayment[]
+     */
+    private $anticipos;
+
+    /**
+     * @var Detraction
+     */
+    private $detraccion;
 
     /**
      * @return string
@@ -490,6 +517,66 @@ class BaseSale implements DocumentInterface
     public function setRelDocs($relDocs)
     {
         $this->relDocs = $relDocs;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCompra()
+    {
+        return $this->compra;
+    }
+
+    /**
+     * @param string $compra
+     *
+     * @return self
+     */
+    public function setCompra($compra)
+    {
+        $this->compra = $compra;
+
+        return $this;
+    }
+
+    /**
+     * @return Prepayment[]
+     */
+    public function getAnticipos()
+    {
+        return $this->anticipos;
+    }
+
+    /**
+     * @param Prepayment[] $anticipos
+     *
+     * @return self
+     */
+    public function setAnticipos($anticipos)
+    {
+        $this->anticipos = $anticipos;
+
+        return $this;
+    }
+
+    /**
+     * @return Detraction
+     */
+    public function getDetraccion()
+    {
+        return $this->detraccion;
+    }
+
+    /**
+     * @param Detraction $detraccion
+     *
+     * @return self
+     */
+    public function setDetraccion($detraccion)
+    {
+        $this->detraccion = $detraccion;
 
         return $this;
     }

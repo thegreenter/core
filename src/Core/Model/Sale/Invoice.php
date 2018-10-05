@@ -54,23 +54,6 @@ class Invoice extends BaseSale
     private $perception;
 
     /**
-     * Orden de Compra relacionado.
-     *
-     * @var string
-     */
-    private $compra;
-
-    /**
-     * @var Prepayment[]
-     */
-    private $anticipos;
-
-    /**
-     * @var Detraction
-     */
-    private $detraccion;
-
-    /**
      * Utilizado cuando se trata de una Factura Guia.
      *
      * @var EmbededDespatch
@@ -222,66 +205,6 @@ class Invoice extends BaseSale
     public function setPerception($perception)
     {
         $this->perception = $perception;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCompra()
-    {
-        return $this->compra;
-    }
-
-    /**
-     * @param string $compra
-     *
-     * @return Invoice
-     */
-    public function setCompra($compra)
-    {
-        $this->compra = $compra;
-
-        return $this;
-    }
-
-    /**
-     * @return Prepayment[]
-     */
-    public function getAnticipos()
-    {
-        return $this->anticipos;
-    }
-
-    /**
-     * @param Prepayment[] $anticipos
-     *
-     * @return Invoice
-     */
-    public function setAnticipos($anticipos)
-    {
-        $this->anticipos = $anticipos;
-
-        return $this;
-    }
-
-    /**
-     * @return Detraction
-     */
-    public function getDetraccion()
-    {
-        return $this->detraccion;
-    }
-
-    /**
-     * @param Detraction $detraccion
-     *
-     * @return Invoice
-     */
-    public function setDetraccion($detraccion)
-    {
-        $this->detraccion = $detraccion;
 
         return $this;
     }
