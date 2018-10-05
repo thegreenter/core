@@ -78,6 +78,11 @@ class SaleDetail
     private $tipSisIsc;
 
     /**
+     * @var float
+     */
+    private $totalImpuestos;
+
+    /**
      * Precio de venta unitario por item.
      *
      * @var float
@@ -315,6 +320,24 @@ class SaleDetail
     {
         $this->tipSisIsc = $tipSisIsc;
 
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalImpuestos()
+    {
+        return $this->totalImpuestos;
+    }
+
+    /**
+     * @param float $totalImpuestos
+     * @return SaleDetail
+     */
+    public function setTotalImpuestos($totalImpuestos)
+    {
+        $this->totalImpuestos = $totalImpuestos;
         return $this;
     }
 
