@@ -39,6 +39,13 @@ class SaleDetail
     private $codProdSunat;
 
     /**
+     * Código de producto GS1.
+     *
+     * @var string
+     */
+    private $codProdGS1;
+
+    /**
      * Descripcion del Producto.
      *
      * @var string
@@ -224,6 +231,24 @@ class SaleDetail
     {
         $this->codProdSunat = $codProdSunat;
 
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCodProdGS1()
+    {
+        return $this->codProdGS1;
+    }
+
+    /**
+     * @param string $codProdGS1
+     * @return SaleDetail
+     */
+    public function setCodProdGS1($codProdGS1)
+    {
+        $this->codProdGS1 = $codProdGS1;
         return $this;
     }
 
