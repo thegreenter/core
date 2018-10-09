@@ -80,7 +80,17 @@ class BaseSale implements DocumentInterface
     /**
      * @var float
      */
+    protected $mtoBaseIsc;
+
+    /**
+     * @var float
+     */
     protected $mtoISC;
+
+    /**
+     * @var float
+     */
+    protected $mtoBaseOth;
 
     /**
      * @var float
@@ -578,6 +588,82 @@ class BaseSale implements DocumentInterface
     {
         $this->detraccion = $detraccion;
 
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoBaseIsc()
+    {
+        return $this->mtoBaseIsc;
+    }
+
+    /**
+     * Set Monto Base ISC.
+     *
+     * @param float $mtoBaseIsc
+     * @return BaseSale
+     */
+    public function setMtoBaseIsc($mtoBaseIsc)
+    {
+        $this->mtoBaseIsc = $mtoBaseIsc;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoBaseOth()
+    {
+        return $this->mtoBaseOth;
+    }
+
+    /**
+     * Set Monto base otros tributos.
+     *
+     * @param float $mtoBaseOth
+     * @return BaseSale
+     */
+    public function setMtoBaseOth($mtoBaseOth)
+    {
+        $this->mtoBaseOth = $mtoBaseOth;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalImpuestos()
+    {
+        return $this->totalImpuestos;
+    }
+
+    /**
+     * @param float $totalImpuestos
+     * @return BaseSale
+     */
+    public function setTotalImpuestos($totalImpuestos)
+    {
+        $this->totalImpuestos = $totalImpuestos;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getValorVenta()
+    {
+        return $this->valorVenta;
+    }
+
+    /**
+     * @param float $valorVenta
+     * @return BaseSale
+     */
+    public function setValorVenta($valorVenta)
+    {
+        $this->valorVenta = $valorVenta;
         return $this;
     }
 
