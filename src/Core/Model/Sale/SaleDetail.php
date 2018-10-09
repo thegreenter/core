@@ -143,6 +143,11 @@ class SaleDetail
     private $mtoValorGratuito;
 
     /**
+     * @var DetailAttribute[]
+     */
+    private $atributos;
+
+    /**
      * @return string
      */
     public function getUnidad()
@@ -600,6 +605,24 @@ class SaleDetail
     public function setDescuentos($descuentos)
     {
         $this->descuentos = $descuentos;
+        return $this;
+    }
+
+    /**
+     * @return DetailAttribute[]
+     */
+    public function getAtributos()
+    {
+        return $this->atributos;
+    }
+
+    /**
+     * @param DetailAttribute[] $atributos
+     * @return SaleDetail
+     */
+    public function setAtributos($atributos)
+    {
+        $this->atributos = $atributos;
         return $this;
     }
 }
