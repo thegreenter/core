@@ -75,6 +75,11 @@ class BaseSale implements DocumentInterface
     /**
      * @var float
      */
+    protected $mtoOperExportacion;
+
+    /**
+     * @var float
+     */
     protected $mtoIGV;
 
     /**
@@ -370,6 +375,24 @@ class BaseSale implements DocumentInterface
     {
         $this->mtoOperExoneradas = $mtoOperExoneradas;
 
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMtoOperExportacion()
+    {
+        return $this->mtoOperExportacion;
+    }
+
+    /**
+     * @param float $mtoOperExportacion
+     * @return BaseSale
+     */
+    public function setMtoOperExportacion($mtoOperExportacion)
+    {
+        $this->mtoOperExportacion = $mtoOperExportacion;
         return $this;
     }
 
