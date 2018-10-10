@@ -134,6 +134,7 @@ class Invoice extends BaseSale
 
     /**
      * @param float $sumDsctoGlobal
+     * @deprecated UBL 2.1
      *
      * @return Invoice
      */
