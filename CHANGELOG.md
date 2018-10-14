@@ -3,6 +3,7 @@
 ## Oct 2018-10-14 UBL 2.1
 
 **Invoice**
+- Se agregó `UblVersion`, valores esperados: **2.0** o **2.1**.
 - `TipoDeOperacion` es requerido, ahora se toma del catálogo 51.
 - `Legends` ahora se toma del catálogo 52.
 - Se agregó `TotalImpuestos` es requerido.
@@ -17,10 +18,11 @@
 - Se agregó `PorcentajeIgv` es requerido.
 - Se agregó `MtoBaseIsc`. 
 - Se agregó `PorcentajeIsc`.
-- Se agrego `Cargo`.
-- Se agrego `Descuento`.
+- Se agrego `Cargos`.
+- Se agrego `Descuentos`.
 
 **Note**
+- Se agregó `UblVersion`, valores esperados: **2.0** o **2.1**.
 - `TipoDeOperacion` es requerido, ahora se toma del catálogo 51.
 - `Legends` ahora se toma del catálogo 52.
 - Se agregó `TotalImpuestos` es requerido.
