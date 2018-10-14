@@ -20,6 +20,11 @@ class BaseSale implements DocumentInterface
     /**
      * @var string
      */
+    protected $ublVersion = '2.0';
+
+    /**
+     * @var string
+     */
     protected $tipoDoc;
 
     /**
@@ -664,6 +669,24 @@ class BaseSale implements DocumentInterface
     public function setTotalImpuestos($totalImpuestos)
     {
         $this->totalImpuestos = $totalImpuestos;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUblVersion()
+    {
+        return $this->ublVersion;
+    }
+
+    /**
+     * @param string $ublVersion
+     * @return $this
+     */
+    public function setUblVersion($ublVersion)
+    {
+        $this->ublVersion = $ublVersion;
         return $this;
     }
 
