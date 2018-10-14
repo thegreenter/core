@@ -14,17 +14,13 @@ namespace Greenter\Model\Sale;
 class Charge
 {
     /**
-     * @var bool
-     */
-    private $indicador;
-    /**
      * @var string
      */
     private $codTipo;
     /**
      * @var string
      */
-    private $porcentaje;
+    private $factor;
     /**
      * @var float
      */
@@ -33,24 +29,6 @@ class Charge
      * @var float
      */
     private $montoBase;
-
-    /**
-     * @return bool
-     */
-    public function isIndicador()
-    {
-        return $this->indicador;
-    }
-
-    /**
-     * @param bool $indicador
-     * @return Charge
-     */
-    public function setIndicador($indicador)
-    {
-        $this->indicador = $indicador;
-        return $this;
-    }
 
     /**
      * @return string
@@ -73,18 +51,18 @@ class Charge
     /**
      * @return string
      */
-    public function getPorcentaje()
+    public function getFactor()
     {
-        return $this->porcentaje;
+        return $this->factor;
     }
 
     /**
-     * @param string $porcentaje
+     * @param string $factor
      * @return Charge
      */
-    public function setPorcentaje($porcentaje)
+    public function setFactor($factor)
     {
-        $this->porcentaje = $porcentaje;
+        $this->factor = $factor;
         return $this;
     }
 
