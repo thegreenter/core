@@ -28,9 +28,17 @@
 - Se agregó `TotalImpuestos` es requerido.
 - Se agregó `MtoBaseIsc`.
 
+**Address**
+- Se agregó `CodLocal`, código asignado por SUNAT para el establecimiento anexo declarado en el RUC (opcional).
+
 **SalePerception**
 - El codigo de régimen se toma del catálogo 53.
 - Se agrego `porcentaje`.
+
+**Detraction**
+- Se agregó `CtaBanco`.
+- Se agregó `CodMedioPago`, ver catálogo 59.
+- Se agregó `CodBienDetraccion`, ver catálogo 54.
 
 **Charge** (Descuentos y Cargos)
 - `codTipo` ver catálogo 53.

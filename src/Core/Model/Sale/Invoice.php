@@ -76,6 +76,16 @@ class Invoice extends BaseSale
     private $guiaEmbebida;
 
     /**
+     * @var Prepayment[]
+     */
+    private $anticipos;
+
+    /**
+     * @var Detraction
+     */
+    private $detraccion;
+
+    /**
      * @var Client
      */
     private $seller;
@@ -251,6 +261,46 @@ class Invoice extends BaseSale
     }
 
     /**
+     * @return Prepayment[]
+     */
+    public function getAnticipos()
+    {
+        return $this->anticipos;
+    }
+
+    /**
+     * @param Prepayment[] $anticipos
+     *
+     * @return Invoice
+     */
+    public function setAnticipos($anticipos)
+    {
+        $this->anticipos = $anticipos;
+
+        return $this;
+    }
+
+    /**
+     * @return Detraction
+     */
+    public function getDetraccion()
+    {
+        return $this->detraccion;
+    }
+
+    /**
+     * @param Detraction $detraccion
+     *
+     * @return Invoice
+     */
+    public function setDetraccion($detraccion)
+    {
+        $this->detraccion = $detraccion;
+
+        return $this;
+    }
+
+    /**
      * @return Client
      */
     public function getSeller()
@@ -352,7 +402,7 @@ class Invoice extends BaseSale
 
     /**
      * @param float $valorVenta
-     * @return $this
+     * @return Invoice
      */
     public function setValorVenta($valorVenta)
     {

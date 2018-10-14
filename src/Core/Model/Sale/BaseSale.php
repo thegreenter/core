@@ -146,17 +146,7 @@ class BaseSale implements DocumentInterface
      *
      * @var string
      */
-    private $compra;
-
-    /**
-     * @var Prepayment[]
-     */
-    private $anticipos;
-
-    /**
-     * @var Detraction
-     */
-    private $detraccion;
+    protected $compra;
 
     /**
      * @return string
@@ -570,46 +560,6 @@ class BaseSale implements DocumentInterface
     public function setCompra($compra)
     {
         $this->compra = $compra;
-
-        return $this;
-    }
-
-    /**
-     * @return Prepayment[]
-     */
-    public function getAnticipos()
-    {
-        return $this->anticipos;
-    }
-
-    /**
-     * @param Prepayment[] $anticipos
-     *
-     * @return $this
-     */
-    public function setAnticipos($anticipos)
-    {
-        $this->anticipos = $anticipos;
-
-        return $this;
-    }
-
-    /**
-     * @return Detraction
-     */
-    public function getDetraccion()
-    {
-        return $this->detraccion;
-    }
-
-    /**
-     * @param Detraction $detraccion
-     *
-     * @return $this
-     */
-    public function setDetraccion($detraccion)
-    {
-        $this->detraccion = $detraccion;
 
         return $this;
     }
