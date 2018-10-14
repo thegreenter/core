@@ -108,11 +108,6 @@ class BaseSale implements DocumentInterface
     protected $totalImpuestos;
 
     /**
-     * @var float
-     */
-    protected $valorVenta;
-
-    /**
      * Importe total de la venta, cesión en uso o del servicio prestado.
      *
      * @var float
@@ -279,7 +274,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getTipoMoneda()
     {
@@ -287,7 +282,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @param mixed $tipoMoneda
+     * @param string $tipoMoneda
      *
      * @return $this
      */
@@ -299,7 +294,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getSumOtrosCargos()
     {
@@ -307,7 +302,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @param mixed $sumOtrosCargos
+     * @param float $sumOtrosCargos
      *
      * @return $this
      */
@@ -319,7 +314,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getMtoOperGravadas()
     {
@@ -327,7 +322,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @param mixed $mtoOperGravadas
+     * @param float $mtoOperGravadas
      *
      * @return $this
      */
@@ -339,7 +334,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getMtoOperInafectas()
     {
@@ -347,7 +342,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @param mixed $mtoOperInafectas
+     * @param float $mtoOperInafectas
      *
      * @return $this
      */
@@ -388,7 +383,7 @@ class BaseSale implements DocumentInterface
 
     /**
      * @param float $mtoOperExportacion
-     * @return BaseSale
+     * @return $this
      */
     public function setMtoOperExportacion($mtoOperExportacion)
     {
@@ -397,7 +392,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getMtoIGV()
     {
@@ -405,7 +400,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @param mixed $mtoIGV
+     * @param float $mtoIGV
      *
      * @return $this
      */
@@ -417,7 +412,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getMtoISC()
     {
@@ -425,7 +420,7 @@ class BaseSale implements DocumentInterface
     }
 
     /**
-     * @param mixed $mtoISC
+     * @param float $mtoISC
      *
      * @return $this
      */
@@ -565,7 +560,7 @@ class BaseSale implements DocumentInterface
     /**
      * @param string $compra
      *
-     * @return self
+     * @return $this
      */
     public function setCompra($compra)
     {
@@ -585,7 +580,7 @@ class BaseSale implements DocumentInterface
     /**
      * @param Prepayment[] $anticipos
      *
-     * @return self
+     * @return $this
      */
     public function setAnticipos($anticipos)
     {
@@ -605,7 +600,7 @@ class BaseSale implements DocumentInterface
     /**
      * @param Detraction $detraccion
      *
-     * @return self
+     * @return $this
      */
     public function setDetraccion($detraccion)
     {
@@ -626,7 +621,7 @@ class BaseSale implements DocumentInterface
      * Set Monto Base ISC.
      *
      * @param float $mtoBaseIsc
-     * @return BaseSale
+     * @return $this
      */
     public function setMtoBaseIsc($mtoBaseIsc)
     {
@@ -646,7 +641,7 @@ class BaseSale implements DocumentInterface
      * Set Monto base otros tributos.
      *
      * @param float $mtoBaseOth
-     * @return BaseSale
+     * @return $this
      */
     public function setMtoBaseOth($mtoBaseOth)
     {
@@ -664,29 +659,11 @@ class BaseSale implements DocumentInterface
 
     /**
      * @param float $totalImpuestos
-     * @return BaseSale
+     * @return $this
      */
     public function setTotalImpuestos($totalImpuestos)
     {
         $this->totalImpuestos = $totalImpuestos;
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
-    public function getValorVenta()
-    {
-        return $this->valorVenta;
-    }
-
-    /**
-     * @param float $valorVenta
-     * @return BaseSale
-     */
-    public function setValorVenta($valorVenta)
-    {
-        $this->valorVenta = $valorVenta;
         return $this;
     }
 

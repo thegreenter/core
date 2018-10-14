@@ -85,6 +85,11 @@ class Invoice extends BaseSale
     private $buyer;
 
     /**
+     * @var float
+     */
+    private $valorVenta;
+
+    /**
      * @return string
      */
     public function getTipoOperacion()
@@ -334,6 +339,24 @@ class Invoice extends BaseSale
     public function setMtoCargos($mtoCargos)
     {
         $this->mtoCargos = $mtoCargos;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getValorVenta()
+    {
+        return $this->valorVenta;
+    }
+
+    /**
+     * @param float $valorVenta
+     * @return $this
+     */
+    public function setValorVenta($valorVenta)
+    {
+        $this->valorVenta = $valorVenta;
         return $this;
     }
 }
