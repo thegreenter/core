@@ -392,20 +392,20 @@ class Invoice extends BaseSale
     }
 
     /**
-	 * @return string
-	 */
-	public function getObservacion()
-	{
-		return $this->observacion;
-	}
+    * @return string
+    */
+    public function getObservacion()
+    {
+	return $this->observacion;
+    }
 
-	/**
-	 * @param string $observacion
-     * @return Invoice
-	 */
-	public function setObservacion($observacion)
-	{
-		$this->observacion = $observacion;
-		return $this;
-	}
+    /**
+    * @param string $observacion
+    * @return Invoice
+    */
+    public function setObservacion($observacion)
+    {
+	$this->observacion = $observacion;
+	return $this;
+    }
 }
