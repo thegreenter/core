@@ -22,5 +22,5 @@ jobs:
       with:
         php-version: '7.1'
     - name: Install PHPStan
-      run: composer require phpstan/phpstan
+      run: composer require phpstan/phpstan:0.11.12
     - run: vendor/bin/phpstan analyse src/ --level 7
