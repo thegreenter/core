@@ -33,11 +33,6 @@ class Invoice extends BaseSale
     /**
      * @var float
      */
-    private $mtoOperGratuitas;
-
-    /**
-     * @var float
-     */
     private $sumDsctoGlobal;
 
     /**
@@ -190,26 +185,6 @@ class Invoice extends BaseSale
     public function setMtoDescuentos($mtoDescuentos)
     {
         $this->mtoDescuentos = $mtoDescuentos;
-
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
-    public function getMtoOperGratuitas()
-    {
-        return $this->mtoOperGratuitas;
-    }
-
-    /**
-     * @param float $mtoOperGratuitas
-     *
-     * @return Invoice
-     */
-    public function setMtoOperGratuitas($mtoOperGratuitas)
-    {
-        $this->mtoOperGratuitas = $mtoOperGratuitas;
 
         return $this;
     }
