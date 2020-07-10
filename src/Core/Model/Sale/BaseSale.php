@@ -430,7 +430,7 @@ class BaseSale implements DocumentInterface
     /**
      * @param float $mtoOperGratuitas
      *
-     * @return Invoice
+     * @return $this
      */
     public function setMtoOperGratuitas($mtoOperGratuitas)
     {
@@ -450,7 +450,7 @@ class BaseSale implements DocumentInterface
     /**
      * @param float $mtoIGVGratuitas
      *
-     * @return Invoice
+     * @return $this
      */
     public function setMtoIGVGratuitas($mtoIGVGratuitas)
     {
